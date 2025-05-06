@@ -29,17 +29,24 @@ android {
         exclude 'META-INF/*******'
     }
 
-    android.libraryVariants.configureEach { variant ->
-        // aar 输出文件名配置
-        variant.outputs.all { output ->
-            outputFileName = "${rootProject.name}-${android.defaultConfig.versionName}.aar"
-        }
-    }
-
     publishing {
         singleVariant("release") {
             withSourcesJar()
             withJavadocJar()
+        }
+    }
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'io.jitpack'
+            artifactId = 'library'
+            version = '1.0'
+
+            afterEvaluate {
+                from components.release
+            }
         }
     }
 }
