@@ -10,7 +10,6 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
 
-
         maven {
             setUrl("https://maven.aliyun.com/repository/google")
         }
@@ -62,4 +61,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "file-util"
 include ':app'
-include 'library'
+include ':library'
