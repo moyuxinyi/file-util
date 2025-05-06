@@ -28,11 +28,25 @@ android {
         // 剔除这个包下的所有文件（不会移除签名信息）
         exclude 'META-INF/*******'
     }
+
+    android.libraryVariants.configureEach { variant ->
+        // aar 输出文件名配置
+        variant.outputs.all { output ->
+            outputFileName = "${rootProject.name}-${android.defaultConfig.versionName}.aar"
+        }
+    }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
 
 dependencies {
     // AndroidX 库: https://github.com/androidx/androidx
-    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
 
     // zip处理框架
     // 开源地址: https://github.com/srikanth-lingala/zip4j
