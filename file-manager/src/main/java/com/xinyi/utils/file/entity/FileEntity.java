@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 /**
  * 文件实体类，用于封装文件或文件夹的基本信息
  *
- * @author 杨耿雷
+ * @author 新一
  * @since 2025/3/17 14:52
  */
 public class FileEntity {

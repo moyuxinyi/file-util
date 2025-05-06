@@ -7,7 +7,7 @@ import java.io.File;
 /**
  * 基础文件工具类，提供文件对象获取、存在性检查、类型判断和扩展名获取等功能
  *
- * @author 杨耿雷
+ * @author 新一
  * @since 2025/3/17 10:09
  */
 public final class FileUtil {

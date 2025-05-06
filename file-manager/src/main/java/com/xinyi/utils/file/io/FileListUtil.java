@@ -12,7 +12,7 @@ import java.util.Locale;
 /**
  * 文件列表工具类，提供读取指定目录下的所有文件和文件夹信息以及文本行读取功能
  *
- * @author 杨耿雷
+ * @author 新一
  * @since 2025/3/17 16:11
  */
 public final class FileListUtil {

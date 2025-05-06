@@ -27,7 +27,7 @@ import java.util.List;
  *  2. 分卷压缩（支持设置分卷大小，单位为字节）。
  *  3. 解压操作（支持加密包解压，并通过 Handler 回调解压进度）。
  *
- * @author 杨耿雷
+ * @author 新一
  * @since 2023/4/20 16:26
  */
 public class EncryptedZipUtil {

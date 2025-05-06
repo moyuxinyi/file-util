@@ -6,7 +6,7 @@ import java.text.DecimalFormat;
 /**
  * 文件大小工具类，计算文件/目录的大小并进行格式化输出
  *
- * @author 杨耿雷
+ * @author 新一
  * @since 2025/3/17 15:11
  */
 public final class FileSizeUtil {

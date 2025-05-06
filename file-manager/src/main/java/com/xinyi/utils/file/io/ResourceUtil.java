@@ -15,7 +15,7 @@ import java.io.InputStream;
  * 支持复制 assets 资源到 filesDir 或 cacheDir 目录。
  * </p>
  *
- * @author 杨耿雷
+ * @author 新一
  * @since 2025/3/25 14:17
  */
 public class ResourceUtil {

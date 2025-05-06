@@ -18,7 +18,7 @@ import java.io.File;
  * <p>
  * 注意：某些路径需要在 Android 6.0 及以上版本中申请相应权限。
  *
- * @author 杨耿雷
+ * @author 新一
  * @since 2025/3/18 10:13
  */
 public class AppFilePathUtil {

@@ -6,7 +6,7 @@ import java.io.*;
 /**
  * 文件复制与移动工具类，提供文件/目录的复制与移动操作
  *
- * @author 杨耿雷
+ * @author 新一
  * @since 2025/3/17 10:31
  */
 public final class FileCopyMoveUtil {

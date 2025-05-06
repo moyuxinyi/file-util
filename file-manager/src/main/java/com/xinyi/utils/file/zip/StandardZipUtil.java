@@ -22,7 +22,7 @@ import java.util.zip.ZipOutputStream;
 /**
  * 基于 java.util.zip 的标准压缩和解压功能，不支持加密
  *
- * @author 杨耿雷
+ * @author 新一
  * @since 2023/3/17
  */
 public class StandardZipUtil {

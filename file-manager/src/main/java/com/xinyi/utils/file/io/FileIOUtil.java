@@ -5,7 +5,7 @@ import java.io.*;
 /**
  * 文件IO工具类，提供将输入流写入文件的方法
  *
- * @author 杨耿雷
+ * @author 新一
  * @since 2025/3/17 10:51
  */
 public final class FileIOUtil {
