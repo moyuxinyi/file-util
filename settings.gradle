@@ -62,4 +62,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "file-util"
 include ':app'
-include 'file-manager'
+include 'library'
