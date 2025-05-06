@@ -32,7 +32,7 @@ android {
 
 dependencies {
     // AndroidX 库: https://github.com/androidx/androidx
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
 
     // zip处理框架
     // 开源地址: https://github.com/srikanth-lingala/zip4j
