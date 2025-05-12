@@ -9,11 +9,11 @@ import java.io.*;
  * @author 新一
  * @since 2025/3/17 10:31
  */
-public final class FileCopyMoveUtil {
+public final class FileCopyMove {
 
-    private static final String TAG = FileCopyMoveUtil.class.getSimpleName();
+    private static final String TAG = FileCopyMove.class.getSimpleName();
 
-    private FileCopyMoveUtil() { }
+    private FileCopyMove() { }
 
     /**
      * 内部基础方法：复制或移动文件或目录
@@ -23,9 +23,13 @@ public final class FileCopyMoveUtil {
      * @param isMove 是否为移动操作（true：移动，false：复制）
      * @return true: 操作成功；false: 操作失败
      */
-    private static boolean copyOrMove(File srcFile, File destFile, boolean isMove) {
-        if (srcFile == null || destFile == null) return false;
-        if (!srcFile.exists()) return false;
+    public static boolean copyOrMove(File srcFile, File destFile, boolean isMove) {
+        if (srcFile == null || destFile == null) {
+            return false;
+        }
+        if (!srcFile.exists()) {
+            return false;
+        }
         if (srcFile.isDirectory()) {
             return copyOrMoveDir(srcFile, destFile, isMove);
         } else {
@@ -41,7 +45,7 @@ public final class FileCopyMoveUtil {
      * @param isMove 是否为移动操作
      * @return true: 成功；false: 失败
      */
-    private static boolean copyOrMoveDir(File srcDir, File destDir, boolean isMove) {
+    public static boolean copyOrMoveDir(File srcDir, File destDir, boolean isMove) {
         if (srcDir == null || destDir == null) {
             return false;
         }
@@ -87,7 +91,7 @@ public final class FileCopyMoveUtil {
      * @param isMove 是否为移动操作
      * @return true: 成功；false: 失败
      */
-    private static boolean copyOrMoveFile(File srcFile, File destFile, boolean isMove) {
+    public static boolean copyOrMoveFile(File srcFile, File destFile, boolean isMove) {
         if (srcFile == null || destFile == null) {
             return false;
         }

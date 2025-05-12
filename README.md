@@ -36,7 +36,7 @@ com/
         ├── io/
         │   ├── FileUtil.java             // 基础文件工具类（获取 File 对象、存在性、扩展名等）
         │   ├── FileOperation.java        // 文件创建、读取、写入、重命名、删除操作
-        │   ├── FileCopyMoveUtil.java     // 文件/目录复制与移动操作
+        │   ├── FileCopyMove.java     // 文件/目录复制与移动操作
         │   ├── FileSizeUtil.java         // 文件/目录大小计算及格式化
         │   ├── FileListUtil.java         // 目录文件列表读取及行读取操作
         │   └── FileIOUtil.java           // 文件 IO 操作工具（流写入）
