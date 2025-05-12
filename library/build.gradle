@@ -57,5 +57,5 @@ dependencies {
 
     // zip处理框架
     // 开源地址: https://github.com/srikanth-lingala/zip4j
-    implementation 'net.lingala.zip4j:zip4j:2.11.5'
+    api 'net.lingala.zip4j:zip4j:2.11.5'
 }
