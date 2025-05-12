@@ -16,13 +16,13 @@ maven {
 ### 2.在 `build.gradle` (Module 级) 中添加依赖：
 ```groovy
 dependencies {
-    implementation 'com.github.moyuxinyi:file-util:1.0.3'
+    implementation 'com.github.moyuxinyi:file-util:1.0.2'
 }
 ```
 
 ```kotlin
 dependencies {
-    implementation("com.github.moyuxinyi:file-util:1.0.3")
+    implementation("com.github.moyuxinyi:file-util:1.0.2")
 }
 ```
 
