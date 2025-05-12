@@ -16,13 +16,13 @@ maven {
 ### 2.在 `build.gradle` (Module 级) 中添加依赖：
 ```groovy
 dependencies {
-    implementation 'com.github.moyuxinyi:file-util:1.0.0'
+    implementation 'com.github.moyuxinyi:file-util:1.0.3'
 }
 ```
 
 ```kotlin
 dependencies {
-    implementation("com.github.moyuxinyi:file-util:1.0.0")
+    implementation("com.github.moyuxinyi:file-util:1.0.3")
 }
 ```
 
@@ -48,8 +48,3 @@ com/
 ```
 
 **更多的使用方式还请参考源码**
-
-## 四、版本变更记录
-
-### V1.0.0 (2025-03-31)
-- 初始版本，提供基础文件管理、路径管理、压缩解压等工具类
