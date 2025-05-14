@@ -21,6 +21,50 @@ public final class FileOperation {
     private FileOperation() { }
 
     /**
+     * 创建一个文件
+     *
+     * @param path 文件路径
+     * @return true: 文件存在或创建成功；false: 创建失败
+     */
+    public static boolean createFile(String path) throws IOException {
+        if (path == null) {
+            return false;
+        }
+        File file = new File(path);
+        return createFile(file);
+    }
+
+    /**
+     * 创建一个文件
+     *
+     * @param file 文件对象
+     */
+    public static boolean createFile(File file) throws IOException {
+        File parent = file.getParentFile();
+        if (parent != null && !parent.exists() && !parent.mkdirs()) {
+            return false;
+        }
+        try {
+            return file.createNewFile();
+        } catch (IOException exception) {
+            throw new IOException("创建文件失败: " + exception.getMessage(), exception);
+        }
+    }
+
+    /**
+     * 如果目录不存在，请创建一个目录，否则什么都不做。
+     *
+     * @param path 文件路径
+     */
+    public static boolean createOrExistsDir(String path) {
+        if (path == null) {
+            return false;
+        }
+        File dir = new File(path);
+        return dir.exists() ? dir.isDirectory() : dir.mkdirs();
+    }
+
+    /**
      * 如果目录不存在，请创建一个目录，否则什么都不做。
      * Create a directory if it doesn't exist, otherwise do nothing.
      *
@@ -65,6 +109,15 @@ public final class FileOperation {
     /**
      * 判断文件是否存在，若不存在则尝试创建
      *
+     * @param path 文件路径
+     */
+    public static boolean createOrExistsFile(String path) throws IOException {
+        return createOrExistsFile(new File(path));
+    }
+
+    /**
+     * 判断文件是否存在，若不存在则尝试创建
+     *
      * @param file 文件对象
      * @return true: 文件存在或创建成功；false: 不存在或创建失败
      */
@@ -75,15 +128,7 @@ public final class FileOperation {
         if (file.exists()) {
             return file.isFile();
         }
-        File parent = file.getParentFile();
-        if (parent != null && !parent.exists() && !parent.mkdirs()) {
-            return false;
-        }
-        try {
-            return file.createNewFile();
-        } catch (IOException exception) {
-            throw new IOException("创建文件失败: " + exception.getMessage(), exception);
-        }
+        return createFile(file);
     }
 
     /**
@@ -99,7 +144,7 @@ public final class FileOperation {
      * @return 新的文件对象。
      * @throws IOException 如果创建文件失败。
      */
-    public static File createNewFile(String dirPath, String filePrefix, String fileExtension) throws IOException {
+    public static File createDateNewFile(String dirPath, String filePrefix, String fileExtension) throws IOException {
         String date = new SimpleDateFormat("yyyy-MM-dd", Locale.CHINA).format(new Date());
         File dateDir = new File(dirPath, date); // 获取当天的子目录
         if (!dateDir.exists() && !dateDir.mkdirs()) {

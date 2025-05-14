@@ -95,7 +95,9 @@ public final class FileUtil {
             return true;
         }
         for (int i = 0, len = s.length(); i < len; i++) {
-            if (!Character.isWhitespace(s.charAt(i))) return false;
+            if (!Character.isWhitespace(s.charAt(i))) {
+                return false;
+            }
         }
         return true;
     }
